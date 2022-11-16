@@ -14,5 +14,6 @@ namespace ML
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
         public ML.Estado Estado { get; set; }
+        public List<object> EmpleadoList { get; set; }
     }
 }

@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+@*<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">*@
+
+<script src="~/Scripts/ValidacionesCampos.js"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Empleados</h2>
+            <p>En este modulo podras ver todos los empleados registrados</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-11">
+            @*@Html.ActionLink("Agregar", "Form", "Empleado", htmlAttributes: new { @class = "btn btn-success"})*@
+            <button type="button" class="btn btn-success" id="btnAnadir">Agregar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="EmpleadosTable" class="table table-bordered display">
+                <thead>
+                    <tr>
+                        <td align="center">Editar</td>
+                        <td align="center" class="hidden">IdEmpleado</td>
+                        <td align="center">Numero de Nomina</td>
+                        <td align="center">Nombre</td>
+                        <td align="center">Apellido Paterno</td>
+                        <td align="center">Apellido Materno</td>
+                        <td align="center" class="hidden">IdEstado</td>
+                        <td align="center">Estado</td>
+                        <td align="center">Eliminar</td>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Formulario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Actualizar empleados</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        @*lblNombre ddlMateria txtApellidoPaterno*@
+                        <input type="text" class="form-control" id="txtIdEmpleado" placeholder="IdEmpleado" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="txtNombre" placeholder="Nombre" onkeypress="return SoloLetras(event)" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="txtApellidoPaterno" placeholder="ApellidoPaterno" onkeypress="return SoloLetras(event)" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="txtApellidoMaterno" placeholder="ApellidoMaterno" onkeypress="return SoloLetras(event)" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="txtTelefono" placeholder="Telefono" onkeypress="return SoloNumeros(event)" />
+                    </div>
+                    <div class="form-group">
+                        <select id="ddlEstado" class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <select id="ddlRol" class="form-control"></select>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnUpdate" onclick="Guardar()">Guardar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

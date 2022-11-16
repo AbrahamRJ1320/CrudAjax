@@ -1,0 +1,32 @@
+CRUD CON AJAX 11/16/2022
+
+SQL -> Crear tabla en sql
+
+
+Estado
+
+IdEstado INT
+Estado VARCHAR(50)
+
+- - - - - - - - - - - - - - - - - - - 
+Empleado
+
+IdEmpleado INT,
+NumeroNomina VARCHAR(10),
+Nombre VARCHAR(50),
+ApellidoPaterno VARCHAR(50),
+ApellidoMaterno VARCHAR(50),
+IdEstado REFERENCES Estado(IdEstado)
+
+_______________________________________________
+
+-->SQL CREAMOS EL SP DE GETALL
+
+_______________________________________________
+
+-->VISUAL STUDIO CREACION DE PROYECTO
+-->CAMBIOS DE GIT
+
+_______________________________________________
+
+

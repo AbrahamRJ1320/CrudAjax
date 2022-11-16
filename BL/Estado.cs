@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    public class Empleado
+    public class Estado
     {
         public static ML.Result GetAll()
         {
@@ -14,34 +14,26 @@ namespace BL
             try
             {
                 using (DL.CrudAjaxEntities context = new DL.CrudAjaxEntities())
-
                 {
                     var query = context.EmpleadoGetAll().ToList();
                     result.Objects = new List<object>();
 
-                    if(query != null)
+                    if (query != null)
                     {
-                        foreach (var obj in query)
+                        foreach (var item in query)
                         {
-                            ML.Empleado empleado = new ML.Empleado();
-                            empleado.Estado = new ML.Estado();
+                            ML.Estado estado = new ML.Estado();
 
-                            empleado.IdEmpleado = obj.IdEmpleado;
-                            empleado.NumeroNomina = obj.NumeroNomina;
-                            empleado.Nombre = obj.Nombre;
-                            empleado.ApellidoPaterno = obj.ApellidoPaterno;
-                            empleado.ApellidoMaterno = obj.ApellidoMaterno;
-                            empleado.Estado.IdEstado = obj.IdEstado.Value;
-                            empleado.Estado.EstadoNombre = obj.Estado;
+                            estado.IdEstado = item.IdEstado.Value;
+                            estado.EstadoNombre = item.Estado;
 
-                            result.Objects.Add(empleado);
+                            result.Objects.Add(estado);
                         }
                         result.Correct = true;
                     }
                     else
                     {
                         result.Correct = false;
-                        result.ErrorMessage = "No se entro ningun Empleado registrado.";
                     }
                 }
             }
@@ -52,6 +44,5 @@ namespace BL
             }
             return result;
         }
-
     }
 }

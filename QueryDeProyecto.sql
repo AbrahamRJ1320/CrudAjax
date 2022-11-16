@@ -40,6 +40,23 @@ GO
 
 --------------------------------------------------------------------------------------------------
 
+--STORED PROCEDURE EstadoGetAll
+
+USE [CrudAjax]
+GO
+CREATE PROCEDURE EstadoGetAll
+AS
+BEGIN
+SELECT [IdEstado]
+      ,[Estado]
+  FROM [dbo].[Estado]
+END
+
+GO
+--------------------------------------------------------------------------------------------------
+
+
+
 
 
 

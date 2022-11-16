@@ -34,5 +34,10 @@ namespace DL
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EmpleadoGetAll_Result>("EmpleadoGetAll");
         }
+    
+        public virtual ObjectResult<EstadoGetAll_Result> EstadoGetAll()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EstadoGetAll_Result>("EstadoGetAll");
+        }
     }
 }

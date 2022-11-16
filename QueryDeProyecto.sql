@@ -54,7 +54,21 @@ END
 
 GO
 --------------------------------------------------------------------------------------------------
-
+--STORED PROCEDURE EmpleadoGetAll
+CREATE PROCEDURE EmpleadoGetById 1
+@IdEmpleado INT
+AS
+BEGIN
+SELECT Empleado.[IdEmpleado]
+      ,Empleado.[NumeroNomina]
+      ,Empleado.[Nombre]
+      ,Empleado.[ApellidoPaterno]
+      ,Empleado.[ApellidoMaterno]
+      ,Empleado.[IdEstado]
+	  ,Estado.Estado
+  FROM [dbo].[Empleado] INNER JOIN Estado on Estado.IdEstado = Empleado.IdEstado
+  WHERE Empleado.IdEmpleado = @IdEmpleado
+END
 
 
 

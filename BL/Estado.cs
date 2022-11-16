@@ -13,7 +13,7 @@ namespace BL
             ML.Result result = new ML.Result();
             try
             {
-                using (DL.CrudAjaxEntities context = new DL.CrudAjaxEntities())
+                using (DL.CrudAjaxEntities1 context = new DL.CrudAjaxEntities1())
                 {
                     var query = context.EmpleadoGetAll().ToList();
                     result.Objects = new List<object>();

@@ -29,4 +29,75 @@ _______________________________________________
 
 _______________________________________________
 
+-->VS Crear los proeyctos y la conexion
+_______________________________________________
+
+-->VS Propiedades de ML
+_______________________________________________
+
+-->VS Metodo GetAllEmpleado
+-->SQL Stored Procedure EstadoGetAll
+-->VS Metodo GetAll Estado 
+
+_______________________________________________
+
+--> CREAR PROYECTO DE WEB SERVICE REST
+-->REALIZAR FUNCIONAMIENTO DE GETALL WEB SERVICE POSTMAN
+
+Instalar las librerias:
+
+Microsoft.AspNet.WebApi
+Microsoft.AspNet.WebApi.Client
+Microsoft.AspNet.WebApi.Core
+Newtonsoft.Json
+System.Net.Http
+______________________________________________________________
+Puerto PL: https://localhost:44355/
+Puerto SL: http://localhost:65208/
+
+
+
+JSON DE LA ENTIDAD
+
+"IdEmpleado": 1,
+        "NumeroNomina": "1320",
+        "Nombre": "Abraham",
+        "ApellidoPaterno": "Reyes",
+        "ApellidoMaterno": "Jimenez",
+        "Estado": {
+            "IdEstado": 12,
+            "EstadoNombre": "EdoMex",
+            "EstadoList": null
+        }
+
+
+RESPALDO GETALL:   
+<td align="center" class="hidden">IdEmpleado</td>
+_______________________________________________________________
+
+ALLORIGINS es una configuracion que se debe de poner en Program para aceptar peticiones Ajax
+
+Global Asax
+
+
+Ahorita salia que era de un Token, ahora ya cambio a eso :c
+va, vamos a ver donde esta el error
+falta tu referencia a jquery
+
+
+Pero es la que esta en la parte de arriba no?
+
+ponla en tu script y espera, hay algo mas que se agrega pero eso lo mando por skype, ahorita pon tu referencia
+
+
+
+
+
+
+
+
+
+
+
+
 

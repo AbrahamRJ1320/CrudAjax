@@ -4,14 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script type="text/javascript" src="~/Scripts/EmpleadoCrud.js"></script>
+<script type="module" src="~/Scripts/EmpleadoCrud.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-@*<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/jqueryui/dataTables.jqueryui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">*@
-
-<script src="~/Scripts/ValidacionesCampos.js"></script>
+<script src="~/Scripts/EmpleadoCrud.js"></script>
 
 <div class="container">
     <div class="row">
@@ -35,12 +31,12 @@
                 <thead>
                     <tr>
                         <td align="center">Editar</td>
-                        <td align="center" class="hidden">IdEmpleado</td>
+                        <td align="center">IdEmpleado</td>
                         <td align="center">Numero de Nomina</td>
                         <td align="center">Nombre</td>
                         <td align="center">Apellido Paterno</td>
                         <td align="center">Apellido Materno</td>
-                        <td align="center" class="hidden">IdEstado</td>
+                        <td align="center">IdEstado</td>
                         <td align="center">Estado</td>
                         <td align="center">Eliminar</td>
                     </tr>
@@ -53,7 +49,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="Formulario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--<div class="modal fade" id="Formulario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -63,9 +59,9 @@
 
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
-                        @*lblNombre ddlMateria txtApellidoPaterno*@
-                        <input type="text" class="form-control" id="txtIdEmpleado" placeholder="IdEmpleado" disabled="disabled" />
+                    <div class="form-group">-->
+@*lblNombre ddlMateria txtApellidoPaterno*@
+<!--<input type="text" class="form-control" id="txtIdEmpleado" placeholder="IdEmpleado" disabled="disabled" />
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="txtNombre" placeholder="Nombre" onkeypress="return SoloLetras(event)" />
@@ -95,4 +91,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->

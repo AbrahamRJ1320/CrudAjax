@@ -15,7 +15,7 @@ namespace BL
             {
                 using (DL.CrudAjaxEntities1 context = new DL.CrudAjaxEntities1())
                 {
-                    var query = context.EmpleadoGetAll().ToList();
+                    var query = context.EstadoGetAll().ToList();
                     result.Objects = new List<object>();
 
                     if (query != null)
@@ -24,7 +24,7 @@ namespace BL
                         {
                             ML.Estado estado = new ML.Estado();
 
-                            estado.IdEstado = item.IdEstado.Value;
+                            estado.IdEstado = item.IdEstado;
                             estado.EstadoNombre = item.Estado;
 
                             result.Objects.Add(estado);
